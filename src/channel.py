@@ -32,3 +32,7 @@ class Channel:
     def channel_id(self):
         return self.__channel_id
 
+    def to_json(self, file_name):
+        chanel_info = json.loads(self.info_channel)
+        with open(file_name, 'w') as file:
+            json.dump(chanel_info, file)
