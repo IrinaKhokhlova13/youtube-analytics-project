@@ -22,41 +22,40 @@ class Channel:
 
 
     def __str__(self) -> str:
-        return f'{self.title} (https://www.youtube.com/channel/{self.__channel_id})'
+        return self.url
 
 
     def __add__(self, other):
-        self.subscriber_count_2 = Channel('UCwHL6WHUarjGfUM_586me8w').subscriber_count
-        _add = int(self.subscriber_count) + int(self.subscriber_count_2)
+        _add = int(self.subscriber_count) + int(other.subscriber_count)
         return _add
 
 
     def __sub__(self, other):
-         _sub_1 = int(self.subscriber_count) - int(self.subscriber_count_2)
+         _sub_1 = int(self.subscriber_count) - int(other.subscriber_count)
          return _sub_1
 
     def __sub__(self, other):
-        _sub_2 = int(self.subscriber_count_2) - int(self.subscriber_count)
+        _sub_2 = int(other.subscriber_count) - int(self.subscriber_count)
         return _sub_2
 
     def __gt__(self, other):
-        _gt = int(self.subscriber_count) > int(self.subscriber_count_2)
+        _gt = int(self.subscriber_count) > int(other.subscriber_count)
         return _gt
 
     def __ge__(self, other):
-        _ge = int(self.subscriber_count) >= int(self.subscriber_count_2)
+        _ge = int(self.subscriber_count) >= int(other.subscriber_count)
         return _ge
 
     def __lt__(self, other):
-        _lt = int(self.subscriber_count) < int(self.subscriber_count_2)
+        _lt = int(self.subscriber_count) < int(other.subscriber_count)
         return _lt
 
     def __le__(self, other):
-        _le = int(self.subscriber_count) <= int(self.subscriber_count_2)
+        _le = int(self.subscriber_count) <= int(other.subscriber_count)
         return _le
 
     def __eq__(self, other):
-        _eq = int(self.subscriber_count) == int(self.subscriber_count_2)
+        _eq = int(self.subscriber_count) == int(other.subscriber_count)
         return _eq
 
 
