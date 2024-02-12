@@ -22,7 +22,7 @@ class Channel:
 
 
     def __str__(self) -> str:
-        return self.url
+        return f'{self.title} {self.url}'
 
 
     def __add__(self, other):
@@ -33,10 +33,6 @@ class Channel:
     def __sub__(self, other):
          _sub_1 = int(self.subscriber_count) - int(other.subscriber_count)
          return _sub_1
-
-    def __sub__(self, other):
-        _sub_2 = int(other.subscriber_count) - int(self.subscriber_count)
-        return _sub_2
 
     def __gt__(self, other):
         _gt = int(self.subscriber_count) > int(other.subscriber_count)
